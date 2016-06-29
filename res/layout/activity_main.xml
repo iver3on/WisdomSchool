@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.wisdomschool2.MainActivity" 
+    >
+
+    <AutoCompleteTextView
+        android:id="@+id/validateCodeAc"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+         android:hint="输入姓名"
+         android:layout_marginTop="20dp"
+         android:completionThreshold="1"
+         android:singleLine="true"
+         />
+    <EditText
+        android:id="@+id/validateCodeEt"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="验证码"
+        android:layout_toRightOf="@id/validateCodeAc"
+        android:layout_alignBottom="@id/validateCodeAc"
+        android:singleLine="true"
+        />
+    <ImageView 
+        android:id="@+id/validateCodeIv"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+         android:layout_toRightOf="@id/validateCodeEt"
+        android:layout_alignBottom="@id/validateCodeAc"
+        android:onClick="changeValidateCode"
+        />
+    <Button 
+        android:id="@+id/queryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="query"
+        android:text="查询"
+        android:layout_below="@id/validateCodeAc"
+        />
+  <ViewFlipper 
+      android:id="@+id/flipper"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/queryBtn"
+      ></ViewFlipper>
+ 
+    
+
+</RelativeLayout>
